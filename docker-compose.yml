@@ -1,0 +1,12 @@
+services:
+  cookcli:
+    image: ghcr.io/tr4cks/docker-cookcli:latest
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Brussels
+    ports:
+      - "9080:9080"
+    volumes:
+      - D:\Documents\perso\cooklang:/recipes
+    restart: unless-stopped
